@@ -7,6 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Reference1 {
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
     public static void main(String[] args) {
 
         Object o = new Object();
@@ -32,5 +37,7 @@ public class Reference1 {
 
         System.out.println("After = " + weakReference.get());
         //System.out.println("After" + softReference.get());
+
+
     }
 }
