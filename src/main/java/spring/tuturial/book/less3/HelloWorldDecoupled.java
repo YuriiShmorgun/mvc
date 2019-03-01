@@ -19,5 +19,15 @@ public class HelloWorldDecoupled {
         messageRender2
                 .setMessageProvider(()-> "super lambda 2")
                 .render();
+
+        StandartLambdaBuilderMessageRender
+                .getInstance()
+                .setMessageProvider(()->"hi from second lambda")
+                .render();
+
+
+
+
+
     }
 }

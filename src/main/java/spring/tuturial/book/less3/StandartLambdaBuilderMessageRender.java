@@ -18,9 +18,14 @@ public class StandartLambdaBuilderMessageRender {
     }
 
 
+    public static StandartLambdaBuilderMessageRender getInstance (){
+        return new StandartLambdaBuilderMessageRender();
+    }
 
 
     public MessageProvider getMessageProvider() {
         return this.messageProvider;
     }
+
+
 }

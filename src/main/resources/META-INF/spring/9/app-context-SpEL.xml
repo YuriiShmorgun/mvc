@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="injectSimpleConfig" class="spring.tuturial.book.less9.config.InjectSimpleConfig"/>
+       <!--p:name="Yurii" p:age="33" p:programmer="true"/>-->
+
+       <bean id="injectSimpleSpel"
+             class="spring.tuturial.book.less9.config.InjectSimpleSpel"
+             p:name="#{injectSimpleConfig.name}"
+             p:age="#{injectSimpleConfig.age}"
+             p:height="#{injectSimpleConfig.height}"
+             p:programmer="#{injectSimpleConfig.programmer}"
+             p:ageInSeconds="#{injectSimpleConfig.ageInSeconds}"/>
+</beans>

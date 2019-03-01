@@ -18,7 +18,10 @@ public class Program {
         }
 
 
-        //nums.stream().forEach();
+        nums.stream()
+                .filter((x)-> x.getAge()>17)
+                .forEach((x)-> System.out.println(x));
+
 
     }
 }
