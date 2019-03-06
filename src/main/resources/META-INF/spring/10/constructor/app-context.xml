@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+  <!--  <bean id="ConstructorConfusionID"
+        class="spring.tuturial.book.less10.consrtuctor.xml.ConstructorConfusion">
+        <constructor-arg value="90" type="java.lang.Integer"/>
+    </bean>-->
+
+    <bean id="ConstructorConfusionID"
+        class="spring.tuturial.book.less10.consrtuctor.xml.ConstructorConfusion"  c:someIntValue="220">
+    </bean>
+
+    <bean id="receiverMessageProviderID"
+        class="spring.tuturial.book.less10.consrtuctor.xml.ResiverMessageProvider"
+        c:_0="Hello from c-xml"/>
+
+
+    <bean id="messageRendererID" class="spring.tuturial.book.less10.consrtuctor.xml.StandartOutMessageRenderer">
+        <constructor-arg ref="ConstructorConfusionID"></constructor-arg>
+    </bean>
+
+    <bean id="messageProviderID" class="spring.tuturial.book.less10.consrtuctor.xml.HelloWorldMessageProvider"/>
+
+</beans>

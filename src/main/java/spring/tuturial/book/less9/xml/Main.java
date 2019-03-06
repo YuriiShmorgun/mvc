@@ -10,6 +10,5 @@ public class Main {
 
         InjectSimple injectSimple = (InjectSimple) genericXmlApplicationContext.getBean("injectSimple");
         System.out.println(injectSimple.toString());
-
     }
 }
